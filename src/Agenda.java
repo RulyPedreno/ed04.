@@ -1,4 +1,10 @@
-
+/**
+ *Esta clase llamada Agenda nos permite crear diferentes Listas de contacto
+ * y nos permite realizar algunas funciones, mediante métodos, con estos contactos.
+ * @version 1.0
+ * @since 2024
+ * @author Raúl Pedreño
+ */
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -7,10 +13,18 @@ import java.util.List;
 public class Agenda {
     private List<Contacto> contacts; // Lista de Contacto
 
+    /**
+     * Método contructor por defecto que crea una lista de contactos
+     */
     public Agenda() {
         this.contacts = new ArrayList<>();
     }
 
+    /**
+     * Método addContact sirve para añadir un contacto a la lista previamente creada.
+     * @param name el nombre del contacto que se quiere añadir.
+     * @param phone el número de telèfono que queremos añadir.
+     */
     public void addContact(String name, String phone) {
         boolean exists = false;
         for (Contacto c : contacts) {
